@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Home, User, Briefcase, Award, Mail } from "lucide-react";
+import { Home, User, Briefcase, Award, FolderKanban } from "lucide-react";
 import { useState, useEffect } from "react";
 
 export default function FloatingNav() {
@@ -19,6 +19,7 @@ export default function FloatingNav() {
     { icon: <Home size={20} />, label: "Home", href: "#" },
     { icon: <User size={20} />, label: "About", href: "#about" },
     { icon: <Briefcase size={20} />, label: "Work", href: "#experience" },
+    { icon: <FolderKanban size={20} />, label: "Projects", href: "#projects" },
     { icon: <Award size={20} />, label: "Skills", href: "#skills" },
   ];
 

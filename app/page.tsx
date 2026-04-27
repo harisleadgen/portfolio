@@ -1,6 +1,7 @@
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Experience from "./components/Experience";
+import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Education from "./components/Education";
 import Testimonials from "./components/Testimonials";
@@ -26,6 +27,10 @@ export default function Home() {
       
       <div id="experience" className="relative z-10">
         <Experience />
+      </div>
+
+      <div id="projects" className="relative z-10">
+        <Projects />
       </div>
       
       <div id="skills" className="relative z-10">

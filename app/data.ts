@@ -12,15 +12,16 @@ export const personalInfo = {
 export const experience = [
   {
     company: "Systems Limited",
-    role: "Digital Marketing Intern",
-    date: "January 2026 - Present",
-    duration: "1 month",
-    location: "Lahore, Punjab, Pakistan",
+    role: "Digital Marketing",
+    date: "Jan 2025 - Mar 2025",
+    duration: "3 months",
+    location: "Lahore, PK",
     description: [
-      "Supported digital marketing initiatives through campaign research, content coordination, and performance tracking.",
-      "Assisted with SEO, social media, and growth-focused activities to strengthen brand visibility across digital channels.",
-      "Collaborated with internal teams to organize marketing tasks, analyze engagement trends, and improve campaign execution.",
-      "Applied data-driven insights to support lead generation, audience targeting, and overall marketing performance."
+      "Conducted QA testing for the Visionet Systems website, identifying and reporting critical bugs to enhance performance, usability, and optimization.",
+      "Supported the promotion of the Microsoft Agentic Ecosystem Workshop & Blueprint for Enterprise Adoption, a joint initiative by Microsoft and Visionet Systems held at Microsoft Office Burlington.",
+      "Designed and managed targeted email campaigns in HubSpot, including audience segmentation, workflow automation, and event outreach to improve engagement and attendance.",
+      "Conducted keyword research and search intent analysis for Microsoft Dynamics 365, contributing to SEO strategy and improved content visibility.",
+      "Created blog content incorporating AEO (Answer Engine Optimization) to enhance relevance and support marketing objectives."
     ]
   },
   {
@@ -109,6 +110,37 @@ export const experience = [
   }
 ];
 
+export const projects = [
+  {
+    title: "Resume Builder Web Application",
+    type: "Personal Project",
+    location: "Remote",
+    date: "Jan 2025 - Present",
+    image: "",
+    link: "",
+    description: [
+      "Conducted end-to-end QA, testing functionality, responsiveness, and usability to ensure a smooth, bug-free user experience.",
+      "Improved website performance and responsiveness, reaching up to 100% scores in testing metrics.",
+      "Built functional AI features into a web application, allowing users to create and optimize content efficiently.",
+      "Implemented CRM automation on the website."
+    ]
+  },
+  {
+    title: "Visionet Website QA & Event Promotion",
+    type: "Systems Limited Project",
+    location: "Lahore, PK",
+    date: "Jan 2025 - Mar 2025",
+    image: "/projects/visionet-validation.png",
+    link: "https://www.visionet.com/",
+    description: [
+      "Conducted QA testing for the Visionet website, identifying and reporting bugs to improve usability, responsiveness, and performance.",
+      "Received validation from the Visionet team for strong observation skills during website QA and event promotion work.",
+      "Supported organic promotion for the Microsoft Agentic Ecosystem Workshop and Blueprint for Enterprise Adoption in Boston.",
+      "Aligned outreach messaging around Agentic AI readiness, enterprise adoption, and practical business transformation outcomes."
+    ]
+  }
+];
+
 export const education = [
   {
     institution: "Khwaja Fareed University of Engineering & Information Technology (KFUEIT)",
@@ -176,5 +208,12 @@ export const testimonials = [
     image: "/recommendations/mohammed.png",
     emoji: "👨‍💼",
     text: "I've always had positive interactions with Haris."
+  },
+  {
+    name: "Syed Muhammad Abbas Haider Jafri",
+    role: "Microsoft & Visionet Event Review",
+    image: "/recommendations/visionet-event-review.png",
+    emoji: "💬",
+    text: "Haris has been a dependable and proactive support, efficiently assisting with HubSpot data extraction and email setup, wishing him continued success ahead."
   }
 ];
