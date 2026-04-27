@@ -18,8 +18,8 @@ export default function FloatingNav() {
   const navItems = [
     { icon: <Home size={20} />, label: "Home", href: "#" },
     { icon: <User size={20} />, label: "About", href: "#about" },
-    { icon: <Briefcase size={20} />, label: "Work", href: "#experience" },
     { icon: <FolderKanban size={20} />, label: "Projects", href: "#projects" },
+    { icon: <Briefcase size={20} />, label: "Work", href: "#experience" },
     { icon: <Award size={20} />, label: "Skills", href: "#skills" },
   ];
 
