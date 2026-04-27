@@ -24,13 +24,13 @@ export default function Home() {
       <div id="about" className="relative z-10">
         <About />
       </div>
-      
-      <div id="experience" className="relative z-10">
-        <Experience />
-      </div>
 
       <div id="projects" className="relative z-10">
         <Projects />
+      </div>
+      
+      <div id="experience" className="relative z-10">
+        <Experience />
       </div>
       
       <div id="skills" className="relative z-10">

@@ -28,8 +28,8 @@ export default function Hero() {
       {/* Parallax Background */}
       <div className="absolute inset-0 bg-grid-pattern z-0 pointer-events-none opacity-30" />
       
-      <motion.div style={{ y: y1 }} className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl" />
-      <motion.div style={{ y: y2 }} className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl" />
+      <motion.div style={{ y: y1 }} className="absolute top-0 left-1/4 w-80 h-80 bg-blue-500/15 rounded-full blur-2xl will-change-transform" />
+      <motion.div style={{ y: y2 }} className="absolute bottom-0 right-1/4 w-80 h-80 bg-purple-500/15 rounded-full blur-2xl will-change-transform" />
 
       <div className="relative z-10 max-w-4xl">
         <motion.div
@@ -39,8 +39,8 @@ export default function Hero() {
         >
           <motion.span 
             className="inline-block py-1 px-3 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium tracking-widest uppercase mb-6 backdrop-blur-sm"
-            animate={{ boxShadow: ["0 0 0px rgba(59,130,246,0)", "0 0 20px rgba(59,130,246,0.5)", "0 0 0px rgba(59,130,246,0)"] }}
-            transition={{ duration: 2, repeat: Infinity }}
+            animate={{ opacity: [0.82, 1, 0.82] }}
+            transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut" }}
           >
             Available for Hire
           </motion.span>

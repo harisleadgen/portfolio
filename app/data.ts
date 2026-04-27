@@ -4,7 +4,7 @@ export const personalInfo = {
   location: "Lahore, Punjab, Pakistan",
   email: "Harisleadgen@gmail.com",
   phone: "+92 312 6801559",
-  linkedin: "https://www.linkedin.com/in/harisleadgen",
+  linkedin: "https://www.linkedin.com/in/harisbd",
   website: "https://harisportfolio88.netlify.app",
   summary: "Digital Marketing Professional with 2+ years of experience driving business development through performance marketing, SEO, and growth strategy. Experienced in collaborating with cross-functional teams to scale brands, optimize funnels, and improve revenue outcomes. Actively expanding expertise in cybersecurity fundamentals to support secure, data-driven digital ecosystems."
 };
@@ -112,31 +112,31 @@ export const experience = [
 
 export const projects = [
   {
-    title: "Resume Builder Web Application",
-    type: "Personal Project",
-    location: "Remote",
-    date: "Jan 2025 - Present",
-    image: "",
-    link: "",
-    description: [
-      "Conducted end-to-end QA, testing functionality, responsiveness, and usability to ensure a smooth, bug-free user experience.",
-      "Improved website performance and responsiveness, reaching up to 100% scores in testing metrics.",
-      "Built functional AI features into a web application, allowing users to create and optimize content efficiently.",
-      "Implemented CRM automation on the website."
-    ]
-  },
-  {
     title: "Visionet Website QA & Event Promotion",
     type: "Systems Limited Project",
     location: "Lahore, PK",
     date: "Jan 2025 - Mar 2025",
-    image: "/projects/visionet-validation.png",
+    image: "/projects/visionet-website.png",
     link: "https://www.visionet.com/",
     description: [
       "Conducted QA testing for the Visionet website, identifying and reporting bugs to improve usability, responsiveness, and performance.",
       "Received validation from the Visionet team for strong observation skills during website QA and event promotion work.",
       "Supported organic promotion for the Microsoft Agentic Ecosystem Workshop and Blueprint for Enterprise Adoption in Boston.",
       "Aligned outreach messaging around Agentic AI readiness, enterprise adoption, and practical business transformation outcomes."
+    ]
+  },
+  {
+    title: "Resume Builder Web Application",
+    type: "Personal Project",
+    location: "Remote",
+    date: "Jan 2025 - Present",
+    image: "/projects/ats-resume-builder.png",
+    link: "https://atstechresume.com/",
+    description: [
+      "Conducted end-to-end QA, testing functionality, responsiveness, and usability to ensure a smooth, bug-free user experience.",
+      "Improved website performance and responsiveness, reaching up to 100% scores in testing metrics.",
+      "Built functional AI features into a web application, allowing users to create and optimize content efficiently.",
+      "Implemented CRM automation on the website."
     ]
   }
 ];

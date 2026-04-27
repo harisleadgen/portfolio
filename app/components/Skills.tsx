@@ -26,15 +26,11 @@ export default function Skills() {
                 initial={{ opacity: 0, scale: 0 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                animate={{ 
-                  y: [0, -8, 0],
-                  boxShadow: ["0 0 0px rgba(59,130,246,0)", "0 5px 15px rgba(59,130,246,0.3)", "0 0 0px rgba(59,130,246,0)"]
-                }}
                 transition={{ 
-                  duration: 3 + Math.random() * 2, 
-                  repeat: Infinity, 
-                  delay: Math.random() * 2,
-                  ease: "easeInOut" 
+                  delay: index * 0.04,
+                  type: "spring",
+                  stiffness: 260,
+                  damping: 22,
                 }}
                 whileHover={{ scale: 1.1, y: -5, transition: { duration: 0.2 } }}
                 className="px-6 py-3 glass-card rounded-full text-slate-300 font-medium cursor-default hover:bg-white/10 hover:text-white hover:border-blue-500/50 transition-all border border-white/5"

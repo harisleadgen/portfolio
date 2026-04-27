@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { testimonials } from "../data";
-import Image from "next/image";
 import TiltCard from "./ui/TiltCard";
 import { Quote, ExternalLink } from "lucide-react";
 

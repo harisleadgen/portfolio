@@ -1,42 +1,56 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 
 export default function CustomCursor() {
-  const [isVisible, setIsVisible] = useState(false);
   const cursorX = useMotionValue(-100);
   const cursorY = useMotionValue(-100);
   
-  const springConfig = { damping: 25, stiffness: 700 };
+  const springConfig = { damping: 32, stiffness: 500, mass: 0.2 };
   const cursorXSpring = useSpring(cursorX, springConfig);
   const cursorYSpring = useSpring(cursorY, springConfig);
 
   useEffect(() => {
-    const moveCursor = (e: MouseEvent) => {
-      cursorX.set(e.clientX - 16);
-      cursorY.set(e.clientY - 16);
-      if (!isVisible) setIsVisible(true);
+    const hasPrecisePointer = window.matchMedia("(pointer: fine)").matches;
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (!hasPrecisePointer || prefersReducedMotion) return;
+
+    let animationFrame: number | null = null;
+    let latestX = -100;
+    let latestY = -100;
+
+    const moveCursor = (e: PointerEvent) => {
+      latestX = e.clientX - 12;
+      latestY = e.clientY - 12;
+
+      if (animationFrame !== null) return;
+
+      animationFrame = window.requestAnimationFrame(() => {
+        cursorX.set(latestX);
+        cursorY.set(latestY);
+        animationFrame = null;
+      });
     };
 
-    window.addEventListener("mousemove", moveCursor);
+    window.addEventListener("pointermove", moveCursor, { passive: true });
+
     return () => {
-      window.removeEventListener("mousemove", moveCursor);
+      window.removeEventListener("pointermove", moveCursor);
+      if (animationFrame !== null) window.cancelAnimationFrame(animationFrame);
     };
-  }, [cursorX, cursorY, isVisible]);
-
-  // Hide on mobile/touch devices usually, but for simplicity we just render.
-  // CSS will handle pointer-events: none so it doesn't block clicks.
+  }, [cursorX, cursorY]);
 
   return (
     <motion.div
-      className="fixed left-0 top-0 w-8 h-8 rounded-full border-2 border-blue-500/50 pointer-events-none z-[100] hidden md:block"
+      className="fixed left-0 top-0 w-6 h-6 rounded-full border border-blue-400/60 pointer-events-none z-[100] hidden md:block will-change-transform"
       style={{
         translateX: cursorXSpring,
         translateY: cursorYSpring,
       }}
     >
-      <div className="absolute inset-0 bg-blue-400/20 rounded-full blur-sm" />
+      <div className="absolute inset-1 rounded-full bg-blue-400/20" />
     </motion.div>
   );
 }
