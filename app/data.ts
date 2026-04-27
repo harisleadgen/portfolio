@@ -15,8 +15,13 @@ export const experience = [
     role: "Digital Marketing Intern",
     date: "January 2026 - Present",
     duration: "1 month",
-    location: "",
-    description: []
+    location: "Lahore, Punjab, Pakistan",
+    description: [
+      "Supported digital marketing initiatives through campaign research, content coordination, and performance tracking.",
+      "Assisted with SEO, social media, and growth-focused activities to strengthen brand visibility across digital channels.",
+      "Collaborated with internal teams to organize marketing tasks, analyze engagement trends, and improve campaign execution.",
+      "Applied data-driven insights to support lead generation, audience targeting, and overall marketing performance."
+    ]
   },
   {
     company: "Obelus Learning and Consultancy",
