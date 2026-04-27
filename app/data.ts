@@ -116,7 +116,7 @@ export const projects = [
     type: "Systems Limited Project",
     location: "Lahore, PK",
     date: "Jan 2025 - Mar 2025",
-    image: "/projects/visionet-validation.png",
+    image: "/projects/visionet-website.png",
     link: "https://www.visionet.com/",
     description: [
       "Conducted QA testing for the Visionet website, identifying and reporting bugs to improve usability, responsiveness, and performance.",
@@ -130,7 +130,7 @@ export const projects = [
     type: "Personal Project",
     location: "Remote",
     date: "Jan 2025 - Present",
-    image: "",
+    image: "/projects/ats-resume-builder.png",
     link: "https://atstechresume.com/",
     description: [
       "Conducted end-to-end QA, testing functionality, responsiveness, and usability to ensure a smooth, bug-free user experience.",
