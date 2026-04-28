@@ -6,7 +6,7 @@ export const personalInfo = {
   phone: "+92 312 6801559",
   linkedin: "https://www.linkedin.com/in/harisbd",
   website: "https://harisportfolio88.netlify.app",
-  summary: "Computer Science graduate and multidisciplinary digital professional with 6+ years of hands-on experience across web development, social media marketing, digital growth, outreach, QA, and technical execution. I combine a technical mindset with marketing experience, building and improving web experiences while understanding how content, campaigns, SEO, automation, and audience engagement drive real business outcomes. My background also includes industry-led cybersecurity training from NETSOL Technologies, giving me a stronger foundation in secure, reliable, and performance-focused digital systems."
+  summary: "Hi, I’m Haris. I build and grow digital products end-to-end, combining web development, marketing, and automation. I have experience with Systems Limited and NETSOL Technologies, with work validated by the Visionet international team."
 };
 
 export const experience = [

@@ -48,7 +48,7 @@ export default function Projects() {
                       alt={`${project.title} preview`}
                       fill
                       sizes="(min-width: 1024px) 50vw, 100vw"
-                      className="object-cover object-top transition-transform duration-700 hover:scale-105"
+                      className="object-contain object-center p-3"
                     />
                   ) : (
                     <div className="absolute inset-0 flex flex-col justify-between p-8">

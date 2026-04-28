@@ -2,28 +2,23 @@
 
 import { motion } from "framer-motion";
 import { personalInfo } from "../data";
-import { Code2, GraduationCap, Megaphone, ShieldCheck } from "lucide-react";
+import { Code2, Megaphone, Search } from "lucide-react";
 
 const profileHighlights = [
   {
-    icon: <GraduationCap size={22} />,
-    label: "Computer Science Graduate",
-    detail: "Technical foundation for building, testing, and improving digital systems."
+    icon: <Code2 size={22} />,
+    label: "Web Development",
+    detail: "Modern websites, responsive UI, QA, performance optimization, automation, and CRM integration."
   },
   {
     icon: <Megaphone size={22} />,
-    label: "Marketing & Social Media",
-    detail: "6+ years across campaigns, outreach, audience growth, and digital positioning."
+    label: "Digital Marketing",
+    detail: "Social media marketing, outreach, campaigns, email workflows, and audience growth."
   },
   {
-    icon: <Code2 size={22} />,
-    label: "Web Development",
-    detail: "Hands-on project experience creating and optimizing modern web applications."
-  },
-  {
-    icon: <ShieldCheck size={22} />,
-    label: "Cybersecurity Training",
-    detail: "Industry-led cybersecurity exposure through NETSOL Technologies."
+    icon: <Search size={22} />,
+    label: "SEO",
+    detail: "Keyword research, search intent, AEO content, and visibility-focused optimization."
   }
 ];
 
@@ -45,7 +40,7 @@ export default function About() {
             About Me
           </p>
           <h3 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-            Technical builder with a marketer&apos;s understanding of growth.
+            Building products with development, marketing, and automation.
           </h3>
           <p className="text-lg md:text-xl text-slate-300 leading-relaxed font-light">
             {personalInfo.summary}
