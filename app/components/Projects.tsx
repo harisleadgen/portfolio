@@ -40,14 +40,15 @@ export default function Projects() {
               transition={{ delay: index * 0.1, duration: 0.7, type: "spring" }}
               className="glass-card overflow-hidden rounded-3xl border border-white/5"
             >
-              <div className="grid lg:grid-cols-[0.9fr_1.1fr]">
-                <div className="relative min-h-72 overflow-hidden border-b border-white/5 bg-slate-900/70 lg:border-b-0 lg:border-r">
+              <div className="grid min-h-[520px] lg:grid-cols-2">
+                <div className="relative min-h-[320px] overflow-hidden border-b border-white/5 bg-slate-900/70 lg:min-h-full lg:border-b-0 lg:border-r">
                   {project.image ? (
                     <Image
                       src={project.image}
                       alt={`${project.title} preview`}
                       fill
-                      className="object-contain p-5 transition-transform duration-700 hover:scale-105"
+                      sizes="(min-width: 1024px) 50vw, 100vw"
+                      className="object-cover object-top transition-transform duration-700 hover:scale-105"
                     />
                   ) : (
                     <div className="absolute inset-0 flex flex-col justify-between p-8">
@@ -73,7 +74,7 @@ export default function Projects() {
                   )}
                 </div>
 
-                <div className="p-8 md:p-10">
+                <div className="flex min-h-[520px] flex-col justify-center p-8 md:p-10 lg:p-12">
                   <div className="mb-5 flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
                     <div>
                       <p className="mb-2 text-sm font-medium uppercase tracking-[0.24em] text-blue-300">
