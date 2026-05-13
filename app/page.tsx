@@ -5,6 +5,7 @@ import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Education from "./components/Education";
 import Testimonials from "./components/Testimonials";
+import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import FloatingNav from "./components/FloatingNav";
 import CustomCursor from "./components/ui/CustomCursor";
@@ -43,6 +44,10 @@ export default function Home() {
       
       <div className="relative z-10">
         <Education />
+      </div>
+
+      <div id="contact" className="relative z-10">
+        <Contact />
       </div>
       
       <Footer />
