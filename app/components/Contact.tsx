@@ -1,10 +1,16 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import { motion } from "framer-motion";
-import { Send, User, Building2, Mail, Phone, Loader2, CheckCircle } from "lucide-react";
+import { Send, User, Building2, Mail, Phone, Loader2, CheckCircle, X } from "lucide-react";
 
-export default function Contact() {
+type ContactProps = {
+  isModal?: boolean;
+  onClose?: () => void;
+};
+
+export default function Contact({ isModal = false, onClose }: ContactProps = {}) {
   const [formData, setFormData] = useState({
     name: "",
     businessName: "",
@@ -45,17 +51,27 @@ export default function Contact() {
     }, 3000);
   };
 
-  return (
-    <section className="py-24 px-6 max-w-4xl mx-auto relative">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-500/10 rounded-full blur-[100px] -z-10" />
+  const content = (
+    <>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-500/10 rounded-full blur-[100px] -z-10 pointer-events-none" />
       
       <motion.div
-        initial={{ opacity: 0, y: 24 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-        className="glass-card p-8 md:p-12 rounded-3xl border border-white/5 relative overflow-hidden"
+        initial={isModal ? { opacity: 0, scale: 0.95 } : { opacity: 0, y: 24 }}
+        whileInView={!isModal ? { opacity: 1, y: 0 } : undefined}
+        animate={isModal ? { opacity: 1, scale: 1 } : undefined}
+        viewport={!isModal ? { once: true } : undefined}
+        transition={{ duration: 0.4 }}
+        className="glass-card p-6 md:p-10 rounded-3xl border border-white/10 relative overflow-hidden w-full bg-slate-900/90 backdrop-blur-2xl shadow-[0_0_50px_rgba(0,0,0,0.5)]"
       >
+        {isModal && (
+          <button 
+            onClick={onClose} 
+            type="button"
+            className="absolute top-5 right-5 text-slate-400 hover:text-white transition-colors z-20 bg-white/5 rounded-full p-2 hover:bg-white/10"
+          >
+            <X className="w-5 h-5" />
+          </button>
+        )}
         <div className="text-center mb-10">
           <p className="mb-4 text-sm font-semibold uppercase tracking-[0.28em] text-blue-300">
             Get In Touch
@@ -176,6 +192,28 @@ export default function Contact() {
           </motion.button>
         </form>
       </motion.div>
+    </>
+  );
+
+  const modalNode = (
+      <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 backdrop-blur-sm p-4 overflow-y-auto">
+        <div className="w-full max-w-2xl mx-auto relative my-8">
+          {content}
+        </div>
+      </div>
+  );
+
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+
+  if (isModal) {
+    if (!mounted) return null;
+    return createPortal(modalNode, document.body);
+  }
+
+  return (
+    <section className="py-24 px-6 max-w-4xl mx-auto relative">
+      {content}
     </section>
   );
 }

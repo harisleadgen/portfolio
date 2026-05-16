@@ -4,6 +4,8 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { personalInfo } from "../data";
 import { Mail, Linkedin, ArrowDown } from "lucide-react";
 import { useEffect, useState } from "react";
+import { AnimatePresence } from "framer-motion";
+import Contact from "./Contact";
 
 export default function Hero() {
   const { scrollY } = useScroll();
@@ -11,6 +13,7 @@ export default function Hero() {
   const y2 = useTransform(scrollY, [0, 500], [0, -150]);
 
   const [text, setText] = useState("");
+  const [isContactOpen, setIsContactOpen] = useState(false);
   const fullText = personalInfo.name;
 
   useEffect(() => {
@@ -72,8 +75,8 @@ export default function Hero() {
             transition={{ delay: 2 }}
             className="flex flex-wrap justify-center gap-4"
           >
-            <motion.a
-              href={`mailto:${personalInfo.email}`}
+            <motion.button
+              onClick={() => setIsContactOpen(true)}
               whileHover={{ scale: 1.1, boxShadow: "0 0 30px rgba(59, 130, 246, 0.6)" }}
               whileTap={{ scale: 0.9 }}
               className="flex items-center gap-2 px-8 py-4 bg-blue-600 text-white rounded-full font-bold text-lg transition-colors relative overflow-hidden group"
@@ -82,7 +85,7 @@ export default function Hero() {
                  <Mail className="w-5 h-5" /> Get in Touch
                </span>
                <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-            </motion.a>
+            </motion.button>
 
             <motion.a
               href={personalInfo.linkedin}
@@ -107,6 +110,12 @@ export default function Hero() {
       >
         <ArrowDown className="w-8 h-8" />
       </motion.div>
+
+      <AnimatePresence>
+        {isContactOpen && (
+          <Contact isModal={true} onClose={() => setIsContactOpen(false)} />
+        )}
+      </AnimatePresence>
     </section>
   );
 }

@@ -10,10 +10,12 @@ import Footer from "./components/Footer";
 import FloatingNav from "./components/FloatingNav";
 import CustomCursor from "./components/ui/CustomCursor";
 import ScrollProgress from "./components/ui/ScrollProgress";
+import { StarsCanvas } from "@/components/ui/star-background";
 
 export default function Home() {
   return (
-    <main className="bg-slate-950 min-h-screen text-slate-200 selection:bg-blue-500/30 overflow-x-hidden cursor-none">
+    <main className="min-h-screen text-slate-200 selection:bg-blue-500/30 overflow-x-hidden cursor-none">
+      <StarsCanvas />
       <CustomCursor />
       <ScrollProgress />
       <FloatingNav />

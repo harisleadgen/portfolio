@@ -30,18 +30,18 @@ export default function Projects() {
         </p>
       </motion.div>
 
-      <div className="grid gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {projects.map((project, index) => (
-          <TiltCard key={project.title}>
+          <TiltCard key={project.title} className="h-full">
             <motion.article
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ delay: index * 0.1, duration: 0.7, type: "spring" }}
-              className="glass-card overflow-hidden rounded-3xl border border-white/5"
+              className="glass-card overflow-hidden rounded-3xl border border-white/5 h-full flex flex-col"
             >
-              <div className="grid min-h-[520px] lg:grid-cols-2">
-                <div className="relative min-h-[320px] overflow-hidden border-b border-white/5 bg-slate-900/70 lg:min-h-full lg:border-b-0 lg:border-r">
+              <div className="flex flex-col h-full">
+                <div className="relative h-64 shrink-0 overflow-hidden border-b border-white/5 bg-slate-900/70">
                   {project.image ? (
                     <Image
                       src={project.image}
@@ -74,8 +74,8 @@ export default function Projects() {
                   )}
                 </div>
 
-                <div className="flex min-h-[520px] flex-col justify-center p-8 md:p-10 lg:p-12">
-                  <div className="mb-5 flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+                <div className="flex flex-col flex-grow p-6 md:p-8">
+                  <div className="mb-5 flex flex-col gap-3">
                     <div>
                       <p className="mb-2 text-sm font-medium uppercase tracking-[0.24em] text-blue-300">
                         {project.type} · {project.location}
@@ -84,7 +84,7 @@ export default function Projects() {
                         {project.title}
                       </h3>
                     </div>
-                    <span className="shrink-0 rounded-full border border-white/10 bg-slate-800/60 px-4 py-2 text-sm font-mono text-slate-300">
+                    <span className="self-start rounded-full border border-white/10 bg-slate-800/60 px-4 py-2 text-sm font-mono text-slate-300">
                       {project.date}
                     </span>
                   </div>
@@ -98,7 +98,8 @@ export default function Projects() {
                     ))}
                   </ul>
 
-                  {project.link ? (
+                  <div className="mt-auto">
+                    {project.link ? (
                     <a
                       href={project.link}
                       target="_blank"
@@ -114,6 +115,7 @@ export default function Projects() {
                       <ArrowUpRight size={18} />
                     </div>
                   )}
+                  </div>
                 </div>
               </div>
             </motion.article>
