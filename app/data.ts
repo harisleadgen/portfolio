@@ -68,13 +68,14 @@ export const education = [
 ];
 
 export const skills = [
+  "Quality Assurance (QA)",
+  "Search Engine Optimization (SEO)",
+  "CRM & HubSpot Automation",
+  "Digital Marketing",
+  "Social Media Marketing",
   "Boolean Searching",
   "Analytical Skills",
-  "Problem Solving",
-  "Business Communication",
-  "Pitching Techniques",
-  "Digital Strategies",
-  "Leadership & Team Management"
+  "Problem Solving"
 ];
 
 export const certifications = [
