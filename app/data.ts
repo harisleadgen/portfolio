@@ -1,12 +1,12 @@
 export const personalInfo = {
   name: "Muhammad Haris",
-  headline: "Marketing-Focused Web Developer | 6+ Years Across Tech, Growth, Social Media & Cybersecurity",
+  headline: "Marketing-Focused Web Developer | 6+ Years Across Tech, Growth, and Social Media",
   location: "Lahore, Punjab, Pakistan",
   email: "Harisleadgen@gmail.com",
   phone: "+92 312 6801559",
   linkedin: "https://www.linkedin.com/in/harisbd",
   website: "https://harisportfolio88.netlify.app",
-  summary: "Hi, I’m Haris. I build and grow digital products end-to-end, combining web development, marketing, and automation. I have experience with Systems Limited, with work validated by the Visionet international team."
+  summary: "Hi, I’m Haris. I build and grow digital products end-to-end, combining web development, marketing, automation, and social media management using Buffer and Notion. I have experience with Systems Limited, with work validated by the Visionet international team."
 };
 
 export const experience = [
