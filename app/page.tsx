@@ -8,17 +8,17 @@ import Testimonials from "./components/Testimonials";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import FloatingNav from "./components/FloatingNav";
-import CustomCursor from "./components/ui/CustomCursor";
 import ScrollProgress from "./components/ui/ScrollProgress";
 import { StarsCanvas } from "@/components/ui/star-background";
+import GlobalLightbox from "./components/GlobalLightbox";
 
 export default function Home() {
   return (
-    <main className="min-h-screen text-slate-200 selection:bg-blue-500/30 overflow-x-hidden cursor-none">
+    <main className="min-h-screen text-slate-200 selection:bg-blue-500/30 overflow-x-hidden">
       <StarsCanvas />
-      <CustomCursor />
       <ScrollProgress />
       <FloatingNav />
+      <GlobalLightbox />
       
       <div id="home">
         <Hero />
