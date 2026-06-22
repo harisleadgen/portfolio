@@ -23,20 +23,6 @@ export const experience = [
       "Conducted keyword research and search intent analysis for Microsoft Dynamics 365, contributing to SEO strategy and improved content visibility.",
       "Created blog content incorporating AEO (Answer Engine Optimization) to enhance relevance and support marketing objectives."
     ]
-  },
-  {
-    company: "Freelance | Self-Employed",
-    role: "Sales And Marketing",
-    date: "June 2022 - August 2024",
-    duration: "2 years 3 months",
-    location: "Rahimyar Khan",
-    description: [
-      "Built zero-ad-spend content pipelines that reached 170K+ international students.",
-      "Converted 400+ students into active users and leads through organic campaigns.",
-      "Led team members to deliver high-impact Instagram content.",
-      "Executed personalized, conversion-focused campaigns to boost engagement.",
-      "Scaled community growth through targeted Instagram strategies and content repurposing."
-    ]
   }
 ];
 
